@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #e7e7e7;
+  padding-top: 2em;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 2em);
+  padding: 0 1em;
+  height: 75px;
+  /*opacity: 0.9;*/
+  background-color: #607F00;
+  box-shadow: 1px 1px 9px 0px rgba(0, 0, 0, 0.55);
+}
+
+.logo {
+  width: 4em;
+  height: 4em;
+}
+
+
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button {
+  width: 2em;
+  height: 2em;
+  margin: 0.5em;
+}
+
+.profile {
+  width: 2.5em;
+  height: 2.5em;
+  margin: 0.5em;
+}
+
+.space {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.slogan {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.plants {
+  margin: 2em;
+}
+
+.icon {
+  width: 4em;
+  height: 4em;
+  margin: 1em;
+}
+
+.title {
+  font-size: 2em;
+  color: #607f00;
+  font-weight: bold;
+}
+
+.vegetable {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.text {
+  color: #2c3e50;
+  font-size: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.watering {
+  color: rgba(47, 65, 84, 0.72);
+  font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  font-style: italic;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stop-watering {
+  background-color: #f5281d;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-size: 1em;
+}
+
+.stop-watering:hover {
+  box-shadow: 6px 4px 8px 0px rgba(0,0,0,0.21);
+  background-color: #e7271c;
+}
+
+.start-watering {
+  background-color: #33bf26;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-size: 1em;
+}
+
+.start-watering:hover {
+  box-shadow: 6px 4px 8px 0px rgba(0,0,0,0.21);
+  background-color: #2ead22;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.statistics{
+  margin: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.humidity-img {
+  width: 5em;
+  height: 5em;
+
+}
+
+.weatherwidget-io {
+  width: 50%;
+  z-index: -1;
+}
+
+.humidity {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.add-button {
+  background-color: #278d59;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  border-radius: 1em;
+  font-size: 1.5em;
+}
+
+.add-button:hover {
+  box-shadow: 6px 4px 8px 0px rgba(0,0,0,0.21);
+  background-color: #237e50;
+}
+
+.circle-wrap {
+  margin: 150px auto;
+  width: 150px;
+  height: 150px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  border: 1px solid #b8b7bb;
+  z-index: -1;
+}
+
+.circle-wrap .circle .mask {
+  clip: rect(0px, 150px, 150px, 75px);
+  z-index: -1;
+}
+
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.mask .fill {
+  clip: rect(0px, 75px, 150px, 0px);
+  background-color: #227ded;
+  z-index: -1;
+}
+
+.mask.full,
+.circle .fill {
+  animation: fill ease-in-out 3s;
+  transform: rotate(135deg);
+  z-index: -1;
+}
+
+@keyframes fill{
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+.circle-wrap .inside-circle {
+  width: 122px;
+  height: 122px;
+  border-radius: 50%;
+  background: #ffffff;
+  text-align: center;
+  margin-top: 14px;
+  margin-left: 14px;
+  color: #1e51dc;
+  position: absolute;
+  z-index: 100;
+  font-weight: 700;
+  font-size: 1.5em;
+  z-index: -1;
+
+}
+
+.text-cerc {
+  margin-top: 27px;
+}
+
+.drop {
+  width: 5em;
+  height: 5em;
+}
+
+.profile {
+  width: 3em;
+  height: 3em;
+}
+
+

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>StopFlo</title>
+</head>
+<body>
+<div id="app">
+    <header>
+        <div class="navbar">
+            <img src="img/logo.png" class="logo">
+            <div>
+                <p class="slogan">Little drops make an Ocean</p>
+            </div>
+
+            <img src="img/profile.png" class="profile" id="profile-icon">
+
+        </div>
+    </header>
+
+    <div class="statistics">
+        <a class="weatherwidget-io" href="https://forecast7.com/en/46d7723d62/cluj-napoca/" data-label_1="CLUJ-NAPOCA"
+           data-label_2="WEATHER" data-font="Open Sans" data-theme="pure">CLUJ-NAPOCA WEATHER</a>
+
+
+        <div class="circle-wrap" >
+            <div class="circle">
+                <div class="mask half">
+                    <div class="fill"></div>
+                </div>
+                <div class="mask full">
+                    <div class="fill"></div>
+                </div>
+                <div class="inside-circle" id="inside">
+                    <div class="text-cerc">
+                         70% Humidity
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="plants">
+        <p class="title">Your plants</p>
+
+        <dl class="list">
+            <div class="item">
+                <div class="vegetable">
+                    <img src="img/potato.png" class="icon">
+                    <dt class="text">Potatoes</dt>
+                </div>
+                <dd class="watering" id="potatoes">Watering...</dd>
+                <button class="stop-watering" id="potatoes-button">Stop watering</button>
+            </div>
+
+            <div class="item">
+                <div class="vegetable">
+                    <img src="img/cabbage.png" class="icon">
+                    <dt class="text">Cabbages</dt>
+                </div>
+                <dd class="watering" id="cabbages">Watering...</dd>
+                <button class="stop-watering" id="cabbages-button">Stop watering</button>
+            </div>
+
+            <div class="item">
+                <div class="vegetable">
+                    <img src="img/bell-pepper.png" class="icon">
+                    <dt class="text">Peppers</dt>
+                </div>
+                <dd class="watering" id="peppers">Water deficiency</dd>
+                <button class="start-watering" id="peppers-button">Start watering</button>
+            </div>
+
+            <div class="item">
+                <div class="vegetable">
+                    <img src="img/garlic.png" class="icon">
+                    <dt class="text">Onions</dt>
+                </div>
+                <dd class="watering">Don't need water now</dd>
+                <button class="start-watering disabled">Start watering</button>
+            </div>
+        </dl>
+
+        <button class="add-button"><i class="fa fa-plus"></i>  Add a plant</button>
+
+    </div>
+
+
+</div>
+
+
+<script type="module" src="/main.js"></script>
+<script>
+    !function (d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (!d.getElementById(id)) {
+            js = d.createElement(s);
+            js.id = id;
+            js.src = 'https://weatherwidget.io/js/widget.min.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }
+    }(document, 'script', 'weatherwidget-io-js');
+
+
+
+</script>
+</body>
+</html>
